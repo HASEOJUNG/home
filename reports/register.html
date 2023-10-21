@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>취업 정보 계정 만들기</title>
+<<<<<<< HEAD
     <style>
         div label {display: inline-block; padding-right: 8px; margin-left: 8px; text-align: right; width: 130px;}
         div p {display: inline-block; padding-right: 8px; margin-left: 8px; text-align: right; width: 130px;}
@@ -64,5 +65,38 @@
 </div>
 <h3><input type="submit" value="제출"> <input type="reset" value="재작성"></h3>
 </form>
+=======
+    <style>h3{margin-left:200px}</style>
+</head>
+<body>
+<h1>취업 정보 계정 만들기</h1>
+<p>* 필수 입력 항목</p>
+<p>기본 정보</p>
+<label>이 름* <input type="text" name="name" id="name" size="8"></label><br>
+<label>이메일* <input type="email" name="email" id="email" placeholder="id@domain_name" size="15"></label><br>
+<label>암호* <input type="password" name="pwd" id="pwd" size="12"></label><br>
+<label>암호 확인* <input type="password" name="pwd_check" id="pwd_check" size="12"></label><br>
+<label>모바일 폰* <input type="tel" name="phone" id="phone" placeholder="010-0000-0000" size="13"></label><br>
+<label>개인 홈페이지 <input type="url" name="homepg" id="homepg" placeholder="http://" size="30"></label><br>
+<label>주소* <input type="text" name="adress" id="adress" size="30"></label><br>
+<p>학력 </p>
+<label>학교 명* <input type="text" name="school" id="school" size="12"></label><br>
+<label>전 공* <input type="text" name="major" id="major" size="12"></label><br>
+<label>졸업 여부* <select name="major" id="major1">
+                <option value="1">---선택---</option>
+                <option value="2">졸업예정</option>
+                <option value="3">선택</option>
+</select></label><br>
+
+<label>졸업(예정)일 <input type="date" name="expect_grad" id="expect_grad"></label><br>
+<p>업무 경력 </p>
+<label>근무업체명 <input type="text" name="company" id="company" size="20"></label><br>
+<label>직위 <input type="text" name="position" id="position" size="10"></label><br>
+<label>담당 업무 <textarea id="comments" name="comments" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea></label><br>
+<label>근무년수 <input type="number" name="years" id="years" min="0" max="10" step="0.5">년</label><br>
+<p>자기소개서 </p>
+<p>첨부파일 <input type="file" value="파일 선택"></p>
+<h3><input type="submit" value="제출"> <input type="reset" value="재작성"></h3>
+>>>>>>> origin/home
 </body>
 </html>
