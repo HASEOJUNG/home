@@ -11,50 +11,50 @@
 </head>
 <body>
 <h1>취업 정보 계정 만들기</h1>
-<form>
+<form name="make_account" method="post">
 <p style="color:red; font-size:10pt">* 필수 입력 항목</p>
 <p style="font-weight: bold; background-color: lightblue; width: 800px; padding-left: 10px">기본 정보</p>
 <div>
-    <label>이 름<span style="color: red">*</span></label>
-        <input type="text" name="name" id="name" size="8"><br>
-    <label>이메일<span style="color: red">*</span></label>
+    <label for='name'>이 름<span style="color: red">*</span></label>
+        <input id="name" name="name" size="8" type="text"><br>
+    <label for="email">이메일<span style="color: red">*</span></label>
         <input type="email" name="email" id="email" placeholder="id@domain_name" size="15"><br>
-    <label>암호<span style="color: red">*</span></label>
+    <label for="pwd">암호<span style="color: red">*</span></label>
         <input type="password" name="pwd" id="pwd" size="12"><br>
-    <label>암호 확인<span style="color: red">*</span></label>
+    <label for="pwd_check">암호 확인<span style="color: red">*</span></label>
         <input type="password" name="pwd_check" id="pwd_check" size="12"><br>
-    <label>모바일 폰<span style="color: red">*</span></label>
+    <label for="phone">모바일 폰<span style="color: red">*</span></label>
         <input type="tel" name="phone" id="phone" placeholder="010-0000-0000" size="13"><br>
-    <label>개인 홈페이지 </label>
+    <label for="homepg">개인 홈페이지 </label>
         <input type="url" name="homepg" id="homepg" placeholder="http://" size="30"><br>
-    <label>주소<span style="color: red">*</span></label>
-        <input type="text" name="adress" id="adress" size="30"><br>
+    <label for="address">주소<span style="color: red">*</span></label>
+        <input type="text" name="address" id="address" size="30"><br>
 </div>
 <p style="font-weight: bold; background-color: lightblue; width: 800px; padding-left: 10px">학력 </p>
 <div>
-    <label>학교 명<span style="color: red">*</span></label>
+    <label for="school">학교 명<span style="color: red">*</span></label>
         <input type="text" name="school" id="school" size="12"><br>
-    <label>전 공<span style="color: red">*</span></label>
+    <label for="major">전 공<span style="color: red">*</span></label>
         <input type="text" name="major" id="major" size="12"><br>
-    <label>졸업 여부<span style="color: red">*</span></label>
-        <select name="major" id="major1">
+    <label for='major1'>졸업 여부<span style="color: red">*</span></label>
+        <select name="major1" id="major1">
                 <option value="1">---선택---</option>
                 <option value="2">졸업예정</option>
                 <option value="3">선택</option>
         </select><br>
 
-    <label>졸업(예정)일</label>
+    <label for="expect_grad">졸업(예정)일</label>
         <input type="date" name="expect_grad" id="expect_grad"><br>
 </div>
 <p style="font-weight: bold; background-color: lightblue; width: 800px; padding-left: 10px">업무 경력 </p>
 <div>
-    <label>근무업체명</label>
+    <label for="company">근무업체명</label>
         <input type="text" name="company" id="company" size="20"><br>
-    <label>직위</label>
+    <label for="position">직위</label>
         <input type="text" name="position" id="position" size="10"><br>
-    <label>담당 업무</label>
+    <label for="comments">담당 업무</label>
         <textarea id="comments" name="comments" cols="80" rows="10">이전 업체에서 담당한 업무를 기술하시오.</textarea><br>
-    <label>근무년수</label>
+    <label for="years">근무년수</label>
         <input type="number" name="years" id="years" min="0" max="10" step="0.5">년<br>
 </div>
 <p style="font-weight: bold; background-color: lightblue; width: 800px; padding-left: 10px">자기소개서 </p>
