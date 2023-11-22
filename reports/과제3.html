@@ -7,12 +7,14 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <script src="../js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
 <div class="container">
     <h2 class="text-center pt-3">취업 정보 계정 만들기</h2>
     <hr>
     <div><span class="text-danger">*</span> 필수 입력 항목</div>
-    <form name="usr_info" method="post">
+
+    <form name="make_account" method="post">
         <p class="text-bg-primary p-2 mt-3 mb-3">기본 정보</p>
         <div class ='row mb-5'>
             <div class = 'col-sm-6'>
@@ -25,6 +27,7 @@
                 <label for='pwd_check' class="form-label mt-2">암호 확인<span class="text-danger">*</span></label>
                     <input type="password" class='form-control mb-2' name="pwd_check" id="pwd_check" size="12" placeholder="암호 확인">
             </div>
+
             <div class="col-sm-6">
                 <label for='phone' class="form-label mt-2">모바일 폰<span class="text-danger">*</span></label>
                     <input type="tel" class="form-control mb-2" name="phone" id="phone" placeholder="010-0000-0000" size="13">
@@ -43,6 +46,7 @@
                     <label for='major' class="form-label mt-2">전 공<span class="text-danger">*</span></label>
                         <input type="text" class='form-control mb-2' name="major" id="major" size="12">
             </div>
+
             <div class="col-sm-6">
                 <label for='grad_stat' class="form-label mb-2">졸업 여부<span class="text-danger">*</span></label>
                     <select class='form-select mb-2' name="grad_stat" id="grad_stat">
@@ -65,13 +69,13 @@
                 <label class="form-label mx-3"><input type="radio" class="form-check-input" name="posit" value="posit4">임원급</label>
             </div>
             <label for="major_task" class="form-label d-flex mt-3 py-1">주요 담당 업무</label>
-                <textarea name="major_task" class="form-control" id="major_task" cols="80" rows='10'>담당했던 주요 업무를 기술하시오.
-                </textarea>
+                <textarea name="major_task" class="form-control" id="major_task" cols="80" rows='10'>담당했던 주요 업무를 기술하시오.</textarea>
         </div>
-        <p class="text-center my-4">
+
+        <div class="text-center my-5">
             <button type="submit" class="btn btn-outline-primary">제출</button>
             <button type="reset" class="btn btn-outline-primary">재작성</button>
-        </p>
+        </div>
     </form>
 </div>
 </body>>
