@@ -2,91 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>과제 3</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <meta name=viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <style>
+        /*** base styles ***/
+* { box-sizing: border-box; }
+p { border: 1px solid black;
+background-color: #5F9EA0;
+width: 90%; height: 150px;
+margin-left: auto; margin-right: auto;
+font-family: Helvet; color: white ; }
+/*** simple responsive framework ***/
+.row { width: 100%; }
+/*** large device only ***/
+@media (min-width: 1200px) {
+.lg_4 {
+float: left;
+border: 1px solid green; }
+.lg_4 { width: 25%; }
+}
+/*** medium device only ***/
+@media (min-width: 950px) and
+(max-width: 1199px){
+.md_2 {
+float: left;
+border: 1px solid green; }
+.md_2 { width: 50%; }
+}
+    </style>
 </head>
 
 <body>
-<div class="container">
-    <h2 class="text-center pt-3">취업 정보 계정 만들기</h2>
-    <hr>
-    <div><span class="text-danger">*</span> 필수 입력 항목</div>
-
-    <form name="make_account" method="post">
-        <p class="text-bg-primary p-2 mt-3 mb-3">기본 정보</p>
-        <div class ='row mb-5'>
-            <div class = 'col-sm-6'>
-                <label for='name' class="form-label mt-2">이 름 <span class="text-danger">*</span></label>
-                    <input type="text" class='form-control mb-2' name="name" id="name" size="8">
-                <label for='email' class="form-label mt-2">이메일 <span class="text-danger">*</span></label>
-                    <input  type="email" class='form-control mb-2' name="email" id="email" placeholder="id@domain_name" size="15">
-                <label for='pwd' class="form-label mt-2">암 호<span class="text-danger">*</span></label>
-                    <input type="password" class='form-control mb-2' name="pwd" id="pwd" size="12" placeholder="암호">
-                <label for='pwd_check' class="form-label mt-2">암호 확인<span class="text-danger">*</span></label>
-                    <input type="password" class='form-control mb-2' name="pwd_check" id="pwd_check" size="12" placeholder="암호 확인">
-            </div>
-
-            <div class="col-sm-6">
-                <label for='phone' class="form-label mt-2">모바일 폰<span class="text-danger">*</span></label>
-                    <input type="tel" class="form-control mb-2" name="phone" id="phone" placeholder="010-0000-0000" size="13">
-                <label for='homepg' class="form-label mt-2">홈 페이지 </label>
-                    <input type="url" class="form-control mb-2" name="homepg" id="homepg" placeholder="http://" size="30">
-                <label for='address' class="form-label mt-2">주 소<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control mb-2" name="address" id="address" size="30">
-            </div>
-        </div>
-
-        <p class="text-bg-success p-2 mt-3 mb-4">학 력</p>
-        <div class = 'row mb-5'>
-            <div class="col-sm-6">
-                    <label for='school' class="form-label mt-2">학교명<span class="text-danger">*</span></label>
-                        <input type="text" class='form-control mb-2' name="school" id="school" size="12">
-                    <label for='major' class="form-label mt-2">전 공<span class="text-danger">*</span></label>
-                        <input type="text" class='form-control mb-2' name="major" id="major" size="12">
-            </div>
-
-            <div class="col-sm-6">
-                <label for='grad_stat' class="form-label mb-2">졸업 여부<span class="text-danger">*</span></label>
-                    <select class='form-select mb-2' name="grad_stat" id="grad_stat">
-                        <option value="1">---선택---</option>
-                        <option value="2">졸업예정</option>
-                        <option value="3">졸 업</option>
-                    </select>
-                <label for="expect_grad" class='form-label mt-2'>졸업(예정)년도<span class="text-danger">*</span></label>
-                    <input type="date" class="form-control mb-2" name="expect_grad" id="expect_grad">
-            </div>
-        </div>
-
-        <p class="text-bg-secondary p-2 mt-3 mb-4">업무 경력</p>
-        <div class="row">
-            <div class="row">최종 직위</div>
-            <div class="form-check col-auto">
-                <input type="radio" class="form-check-input" name="posit" id="posit1" value="posit1" checked>
-                <label class="form-check-label" for="posit1">사원급</label>
-            </div>
-            <div class="form-check col-auto">
-                <input type="radio" class="form-check-input" name="posit" id="posit2" value="posit2">
-                <label class="form-check-label" for="posit2">대리 ~ 과장</label>
-            </div>
-            <div class="form-check col-auto">
-                <input type="radio" class="form-check-input" name="posit" id='posit3' value="posit3">
-                <label class="form-check-label" for="posit3">차장급 이상</label>
-            </div>
-            <div class="form-check col-auto">
-                <input type="radio" class="form-check-input" name="posit" id='posit4' value="posit4">
-                <label class="form-check-label" for="posit4">임원급</label>
-            </div>
-            <label for="major_task" class="form-label d-flex mt-3 py-1">주요 담당 업무</label>
-                <textarea name="major_task" class="form-control" id="major_task" cols="80" rows='10'>담당했던 주요 업무를 기술하시오.</textarea>
-        </div>
-
-        <div class="text-center my-5">
-            <button type="submit" class="btn btn-outline-primary">제출</button>
-            <button type="reset" class="btn btn-outline-primary">재작성</button>
-        </div>
-    </form>
+<h3>반응형 웹 레이아웃</h3>
+<div class="row">
+<div class="lg_4 md_2"><p>블록 영역 1</p></div>
+<div class="lg_4 md_2"><p>블록 영역 2</p></div>
+<div class="lg_4 md_2"><p>블록 영역 3</p></div>
+<div class="lg_4 md_2"><p>블록 영역 4</p></div>
+<div class="lg_4 md_2"><p>블록 영역 5</p></div>
+<div class="lg_4 md_2"><p>블록 영역 6</p></div>
+<div class="lg_4 md_2"><p>블록 영역 7</p></div>
+<div class="lg_4 md_2"><p>블록 영역 8</p></div>
 </div>
 </body>
 </html>
